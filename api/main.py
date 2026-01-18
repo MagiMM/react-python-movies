@@ -49,7 +49,7 @@ def add_movie(movie: Movie):
     movie_id = cursor.lastrowid
     return {"id": movie_id, "title": movie.title, "year": movie.year, "actors": movie.actors}
     # movie = models.Movie.create(**movie.dict())
-    # return movie
+    # return movie 
 
 @app.put("/movies/{movie_id}")
 def update_movie(movie_id:int, params: dict[str, Any]):
